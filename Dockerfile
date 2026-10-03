@@ -7,4 +7,4 @@ COPY app ./app
 ENV PORT=8080
 ENV HF_HOME=/models/huggingface
 ENV WHISPER_MODEL=base
-CMD ["sh", "-c", "uvicorn app.main_v2:app --host 0.0.0.0 --port ${PORT:-8080}"]
+CMD ["sh", "-c", "uvicorn app.main_v3:app --host 0.0.0.0 --port ${PORT:-8080}"]
