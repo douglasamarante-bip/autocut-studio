@@ -7,4 +7,5 @@ COPY app ./app
 ENV PORT=8080
 ENV HF_HOME=/models/huggingface
 ENV WHISPER_MODEL=base
-CMD ["sh", "-c", "uvicorn app.main_v3:app --host 0.0.0.0 --port ${PORT:-8080}"]
+ENV GROQ_TEXT_MODEL=openai/gpt-oss-20b
+CMD ["sh", "-c", "uvicorn app.main_v4:app --host 0.0.0.0 --port ${PORT:-8080}"]
